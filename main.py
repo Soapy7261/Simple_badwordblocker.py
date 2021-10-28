@@ -3,11 +3,11 @@ from disnake.ext import commands #import commands from Disnake.
 from disnake.ext.commands import Param #import the parameter from Disnake.
 import os #import the Operating system. Needed for restarts.
 import sys #import the system. Needed for restarts.
+from disnake.ext import tasks
 
 from disnake.ext import * #import the ability to add bad words. Needed for commands.
 
-
-
+from itertools import cycle # Get the cycle abilty.
 
 
 
@@ -17,12 +17,17 @@ intents = disnake.Intents.default() #Imports to get the bot working.
 
 bot = commands.Bot(command_prefix="+", intents=intents) #define prefix and define intents
 
+status = cycle(['Status1','Status2']) #The things the status will show
 
+@tasks.loop(seconds=15) #Loops a task with a timer, You can change the time to be faster or slower
+async def change_status(): #changes the status
+    await bot.change_presence(activity=disnake.Game(next(status)))
 
 
 
 @bot.event
 async def on_ready():
+    change_status.start()
     print('Bot is starting and ready for use!..') #when the bot's ready to be used, print a message to the console.
 
 
@@ -189,4 +194,4 @@ async def on_message(message):
 
 
 
-bot.run("") #insert the bot token
+bot.run ('') #insert the bot token
