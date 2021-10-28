@@ -27,9 +27,6 @@ async def on_ready():
 
 
 
-
-
-
 #-------------------custom------------------------#
 
 with open("badwords.txt", encoding="utf8") as file: #open a file called `badwords.txt`
@@ -51,7 +48,6 @@ async def add(ctx, *, word): #pass context and define the word to add.
 
         await ctx.send(f'`{word}` \nhas been added to blacklist. Please allow up to 5 seconds while the system restarts.') #write to the author that the word has been added.
         os.execl(sys.executable, sys.executable, *sys.argv) #restart the bot so the bot can sync the data.
-
 
 
 @bot.command()
@@ -78,9 +74,6 @@ async def view_custom_filter(ctx): #view the custom filter of bad words
     await ctx.send(f'View the bad word list here ```{blacklist}```.') #send the bad word list
 
 
-
-
-
 #simple filter
 
 @bot.listen() #listen events will listen for messages on Discord.
@@ -103,8 +96,6 @@ async def on_message(message):
 
 
 #-------------------base-filter------------------------#
-
-
 
 
 
@@ -149,7 +140,6 @@ async def restore_base_filter(ctx):
         os.remove("basefilter.txt") #remove the file so all contents get deleted
 
 
-
         f= open("basefilter.txt","w+") #add the same file again
         print("File created!") #print the file has been made
 
@@ -157,15 +147,8 @@ async def restore_base_filter(ctx):
         f.close()
 
 
-
         await ctx.send(f'The base filter has been restored! had been added to blacklist. Please allow up to 5 seconds while the system restarts.')
         os.execl(sys.executable, sys.executable, *sys.argv)
-
-
-
-
-
-
 
 
 @bot.listen()
@@ -184,9 +167,6 @@ async def on_message(message):
             embed = disnake.Embed(title="Message Deleted", color=0xD708CC, description= f"Bad word blocked by {message.author.mention}..")
             embed.timestamp = disnake.utils.utcnow()
             await message.channel.send(embed=embed)
-
-
-
 
 
 bot.run ('') #insert the bot token
