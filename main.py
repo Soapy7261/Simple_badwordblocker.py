@@ -1,5 +1,5 @@
 import disnake #import the discord fork. I'm using Disnake for this project since it's an easy fork.
-from disnake.ext import commands, tasks #import commands from Disnake.
+from disnake.ext import commands, tasks #import commands and tasks from Disnake.
 from disnake.ext.commands import Param #import the parameter from Disnake.
 import os #import the Operating system. Needed for restarts.
 import sys #import the system. Needed for restarts.
