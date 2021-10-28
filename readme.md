@@ -1,4 +1,4 @@
-This adds a status to the main.py file, just a nice thing to have, and some other small things
+This adds a status to the main.py file, and some other small things
 
 Please make sure you install Disnake.
 
