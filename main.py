@@ -26,7 +26,13 @@ async def on_ready():
     change_status.start() #Start status
     print('Bot is starting and ready for use!..') #when the bot's ready to be used, print a message to the console.
 
-
+@bot.event
+async def on_command_error(ctx,error):
+    await ctx.message.add_reaction("❌") #You might want to remove this line if its causing errors, this can cause issues with some slash command libraries.
+    embed = disnake.Embed(title="An Error Occured", color=0x9C0000, description=f"```{str(error)}```")
+    embed.timestamp = datetime.utcnow() 
+    await ctx.send(embed=embed)
+    #await ctx.send (f"{str(error)}") #You can use this if you dont wanna use a embed
 
 #-------------------custom------------------------#
 
