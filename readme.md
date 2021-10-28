@@ -6,7 +6,7 @@ Installing Disnake on MacOS: **pip3 install disnake**
 
 Installing Disnake on other Operating system's: **pip install disnake**
 
-You have to install git. Please google how you do that for your Operating System.
+You also have to install git. Please google how you do that for your Operating System.
 
 Installing Disnake on Git: **git clone https://github.com/EQUENOS/disnake**
 
