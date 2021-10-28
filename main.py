@@ -49,7 +49,7 @@ async def add(ctx, *, word): #pass context and define the word to add.
             f.write("\n"+word) #indent line and write the word.
         f.close() #close the text file.
 
-        await ctx.send(f'`{word}` \n had been added to blacklist. Please allow up to 5 seconds while the system restarts.') #write to the author that the word has been added.
+        await ctx.send(f'`{word}` \nhas been added to blacklist. Please allow up to 5 seconds while the system restarts.') #write to the author that the word has been added.
         os.execl(sys.executable, sys.executable, *sys.argv) #restart the bot so the bot can sync the data.
 
 
