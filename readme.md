@@ -1,6 +1,6 @@
 This fork adds a status to the main.py file, and some other small things
 
-**You must install the libraries below or this will not work!**
+**You must install the libraries listed below or this will not work!**
 
 Disnake:
 
