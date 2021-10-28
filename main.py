@@ -1,33 +1,29 @@
 import disnake #import the discord fork. I'm using Disnake for this project since it's an easy fork.
-from disnake.ext import commands #import commands from Disnake.
+from disnake.ext import commands, tasks #import commands from Disnake.
 from disnake.ext.commands import Param #import the parameter from Disnake.
 import os #import the Operating system. Needed for restarts.
 import sys #import the system. Needed for restarts.
-from disnake.ext import tasks
+from disnake.ext import tasks #unoir
 
 from disnake.ext import * #import the ability to add bad words. Needed for commands.
 
 from itertools import cycle # Get the cycle abilty.
 
 
-
-
 intents = disnake.Intents.default() #Imports to get the bot working.
 
+status = cycle(['Status1','Status2','Status3']) #The things the status will show
 
-bot = commands.Bot(command_prefix="+", intents=intents) #define prefix and define intents
+bot = commands.Bot(command_prefix="+", intents=intents, status=disnake.Status.dnd, activity=disnake.Activity(type=disnake.ActivityType.listening, name=f"")) #define prefix and define intents and status, you can change the watching to playing or listening, if you do that you should also change line 22
 
-status = cycle(['Status1','Status2']) #The things the status will show
 
-@tasks.loop(seconds=15) #Loops a task with a timer, You can change the time to be faster or slower
+@tasks.loop(seconds=15) #Loops a task with a timer, you can change the time for how fast or how slow you want it to change
 async def change_status(): #changes the status
-    await bot.change_presence(activity=disnake.Game(next(status)))
-
-
+    await bot.change_presence(status=disnake.Status.dnd, activity=disnake.Activity(type=disnake.ActivityType.playing, name=(f"{(next(status))}"))) #Changing the custom status to the next, you can change it from playing to listening or watching, if you do that you should also change line 17 to the same kind of status, (talking about playing listening and watching) if you haven't already
 
 @bot.event
 async def on_ready():
-    change_status.start()
+    change_status.start() #Start status
     print('Bot is starting and ready for use!..') #when the bot's ready to be used, print a message to the console.
 
 
