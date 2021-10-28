@@ -1,13 +1,16 @@
-This adds a status to the main.py file, and some other small things
+This fork adds a status to the main.py file, and some other small things
 
-Please make sure you install Disnake.
+**Please install these libraries or this will not work!**
 
-Installing Disnake on MacOS: **pip3 install disnake**
+Disnake:
 
-Installing Disnake on other Operating system's: **pip install disnake**
+Installing Disnake on MacOS: `pip3 install disnake`
 
-You also have to install git. Please google how you do that for your Operating System.
+Installing Disnake on other Operating systems: `pip install disnake`
 
-Installing Disnake on Git: **git clone https://github.com/EQUENOS/disnake**
+git:
+Please google how you do that for your Operating System.
 
-In MacOS, Python comes pre-installed. If you are on another Operating System, please download Python on the offical website located here: https://www.python.org/downloads/
+Installing Disnake on Git: `git clone https://github.com/EQUENOS/disnake`
+
+In MacOS, Python comes pre-installed. If you're on another Operating System, Download Python on the offical website located here: `https://www.python.org/downloads/`
