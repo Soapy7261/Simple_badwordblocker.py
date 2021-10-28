@@ -17,7 +17,7 @@ status = cycle(['Status1','Status2','Status3']) #The things the status will show
 bot = commands.Bot(command_prefix="+", intents=intents, status=disnake.Status.dnd, activity=disnake.Activity(type=disnake.ActivityType.listening, name=f"")) #define prefix and define intents and status, you can change the watching to playing or listening, if you do that you should also change line 22
 
 
-@tasks.loop(seconds=15) #Loops a task with a timer, you can change the time for how fast or how slow you want it to change
+@tasks.loop(seconds=30) #Loops a task with a timer, you can change the time for how fast or how slow you want it to change
 async def change_status(): #changes the status
     await bot.change_presence(status=disnake.Status.dnd, activity=disnake.Activity(type=disnake.ActivityType.playing, name=(f"{(next(status))}"))) #Changing the custom status to the next, you can change it from playing to listening or watching, if you do that you should also change line 17 to the same kind of status, (talking about playing listening and watching) if you haven't already
 
