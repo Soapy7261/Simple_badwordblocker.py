@@ -13,7 +13,7 @@ intents = disnake.Intents.default() #Imports to get the bot working.
 
 status = cycle(['Status1','Status2','Status3']) #The things the status will show
 
-bot = commands.Bot(command_prefix="+", intents=intents, status=disnake.Status.dnd, activity=disnake.Activity(type=disnake.ActivityType.listening, name="")) #define prefix and define intents and status, you can change the watching to playing or listening, if you do that you should also change line 22
+bot = commands.Bot(command_prefix="+", intents=intents, status=disnake.Status.dnd, activity=disnake.Activity(type=disnake.ActivityType.playing, name="")) #define prefix and define intents and status, you can change the playing to watching or listening, if you do that you should also change line 22
 
 
 @tasks.loop(seconds=30) #Loops a task with a timer, you can change the time for how fast or how slow you want it to change
