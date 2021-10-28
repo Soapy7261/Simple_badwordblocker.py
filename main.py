@@ -128,9 +128,6 @@ async def view_base_filter(ctx):
 
 
 
-
-
-
 @bot.command()
 @commands.has_permissions(administrator=True)
 async def restore_base_filter(ctx):
@@ -156,7 +153,6 @@ async def on_message(message):
 
     message.content = message.content.lower()
     message.content = disnake.utils.remove_markdown(message.content)
-
 
 
     for word in blacklist2:
