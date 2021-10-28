@@ -6,7 +6,7 @@ import sys #import the system. Needed for restarts.
 
 from disnake.ext import * #import the ability to add bad words. Needed for commands.
 
-from itertools import cycle # Get the cycle abilty.
+from itertools import cycle #import cycle from intertools
 
 
 intents = disnake.Intents.default() #Imports to get the bot working.
