@@ -1,4 +1,4 @@
-This is a fork of simple_badwordblocker made by User319183, Forked by Soapy7261, This has a status in the main.py file, and some other small things
+This is a fork of simple_badwordblocker made by User319183, Forked by Soapy7261, This adds a status and some other small things to the main.py file
 
 **Please do not clear the whole `basefilter.txt` or `badwords.txt` without using the clear command, the bot will break.**
 
