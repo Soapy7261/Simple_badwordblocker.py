@@ -4,7 +4,7 @@ from disnake.ext import commands, tasks #import commands and tasks from Disnake.
 from disnake.ext.commands import Param #import the parameter from Disnake.
 import os #import the Operating system. Needed for restarts.
 import sys #import the system. Needed for restarts.
-
+from datetime import datetime
 from disnake.ext import * #import the ability to add bad words. Needed for commands.
 
 from itertools import cycle #import cycle from intertools
@@ -66,7 +66,7 @@ async def clear_custom_filter(ctx):
     file.close() #close the file
 
     with open("badwords.txt", "a") as f:
-        f.write("eiufewhiuwefhuwefhwfhueiwfehihewfiwefiuwefiuhwefiuh") #write nonsense to the file. If file is empty the bot will delete everything sent on Discord.
+        f.write("if.you.remove.this.line.with.nothing.in.here.the.bot.will.break!") #write stuff to the file. If file is empty the bot will delete everything sent on Discord.
     f.close()
 
     await ctx.send(f'Bad word list cleared. Please allow up to 5 seconds while the system restarts.') #tell the author that the bad word list has been cleared.
