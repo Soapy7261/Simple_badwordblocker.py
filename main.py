@@ -4,7 +4,7 @@ from disnake.ext import commands, tasks #import commands and tasks from Disnake.
 from disnake.ext.commands import Param #import the parameter from Disnake.
 import os #import the Operating system. Needed for restarts.
 import sys #import the system. Needed for restarts.
-from datetime import datetime
+from datetime import datetime #import datetime, neeeded for the time in embeds
 from disnake.ext import * #import the ability to add bad words. Needed for commands.
 
 from itertools import cycle #import cycle from intertools
