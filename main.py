@@ -102,8 +102,6 @@ async def on_message(message):
             await message.channel.send(embed=embed) #send embed to channel
 
 
-
-
 #-------------------base-filter------------------------#
 
 
@@ -136,13 +134,11 @@ async def view_base_filter(ctx):
     await ctx.send(f'View the base filter here ```{blacklist2}```.')
 
 
-
 @bot.command()
 @commands.has_permissions(administrator=True)
 async def restore_base_filter(ctx):
 
-
-
+    
         os.remove("basefilter.txt") #remove the file so all contents get deleted
 
 
