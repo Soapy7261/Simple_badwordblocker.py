@@ -24,7 +24,7 @@ async def change_status(): #changes the status
 @bot.event
 async def on_ready():
     change_status.start() #Start status
-    print('Bot is starting and ready for use!..') #when the bot's ready to be used, print a message to the console.
+    print('Bot is ready for use!') #when the bot's ready to be used, print a message to the console.
 
 @bot.event
 async def on_command_error(ctx,error):
