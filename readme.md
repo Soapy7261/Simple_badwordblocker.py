@@ -1,5 +1,7 @@
 This fork adds a status to the main.py file, and some other small things
 
+**DO NOT CLEAR THE `badwords.txt` FILE OR `basefilter.txt` OR THE BOT WILL BREAK!**
+
 **You must install the libraries listed below or this will not work!**
 
 Disnake:
