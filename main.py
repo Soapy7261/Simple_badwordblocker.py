@@ -1,4 +1,4 @@
-#This is a fork made by Soapy7261
+#This is a fork of Simple_BadWordBlocker Codded by User319183, Forked by Soapy7261
 import disnake #import the discord fork. I'm using Disnake for this project since it's an easy fork.
 from disnake.ext import commands, tasks #import commands and tasks from Disnake.
 from disnake.ext.commands import Param #import the parameter from Disnake.
