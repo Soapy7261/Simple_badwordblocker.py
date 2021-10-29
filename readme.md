@@ -1,6 +1,6 @@
 This fork adds a status to the main.py file, and some other small things
 
-**DO NOT CLEAR THE `badwords.txt` FILE OR `basefilter.txt` OR THE BOT WILL BREAK!**
+**Please do not clear the whole `basefilter.txt` or `badwords.txt` without using the clear command, the bot will break.**
 
 **You must install the libraries listed below or this will not work!**
 
