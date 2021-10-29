@@ -96,7 +96,9 @@ async def on_message(message):
             return #return the function of seeing if author is a bot. if you want the bot to detect bad words on another bot, remove this line
         if message.content.count(word) > 0: #check the content count once.
             await message.delete() #delete the bad word
-            embed = disnake.Embed(title="Message Deleted", description= f"Bad word blocked by {message.author.mention}..", colour=disnake.Color.random()) #send an embed
+            embed = disnake.Embed(title="Message Deleted", description= f"Bad word blocked by {message.author.mention}", colour=disnake.Color.random()) #send an embed
+            embed.add_field(name = f"User ID:", value = f"{message.author.id}")
+            embed.timestamp = disnake.utils.utcnow()
             await message.channel.send(embed=embed) #send embed to channel
 
 
@@ -167,7 +169,8 @@ async def on_message(message):
             return
         if message.content.count(word) > 0:
             await message.delete()
-            embed = disnake.Embed(title="Message Deleted", description= f"Bad word blocked by {message.author.mention}..", colour=disnake.Color.random())
+            embed = disnake.Embed(title="Message Deleted", description= f"Bad word blocked by {message.author.mention}", colour=disnake.Color.random()) #send an embed
+            embed.add_field(name = f"User ID:", value = f"{message.author.id}")
             embed.timestamp = disnake.utils.utcnow()
             await message.channel.send(embed=embed)
 
