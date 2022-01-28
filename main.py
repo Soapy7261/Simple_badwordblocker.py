@@ -104,7 +104,23 @@ async def on_message(message):
                 embed.add_field(name = f"User ID:", value = f"{message.author.id}")
                 embed.timestamp = disnake.utils.utcnow()
                 await message.channel.send(embed=embed) #send embed to channel
+                #uncomment the lines underneeth if you want the bot to send a webhook of the user swearing.
 
+#                 channel_webhooks = await message.channel.webhooks()
+#                 webhook_count = 0
+
+#                
+#                 for webhook in channel_webhooks:
+#                
+#                     if webhook.user.id == message.author.id and webhook.name == "Bot Webhook":
+#                         await webhook.send(
+#                             content=message.content, username=message.author.display_name, avatar_url=message.author.avatar
+#                         )
+#                         return
+
+#               
+#                 new_webhook = await message.channel.create_webhook(name="Bot Webhook", reason="Bot Webhook")
+#                 await new_webhook.send(content=message.content, username=message.author.display_name, avatar_url=message.author.avatar)
 
 #-------------------base-filter------------------------#
 
@@ -178,6 +194,22 @@ async def on_message(message):
                 embed.add_field(name = f"User ID:", value = f"{message.author.id}")
                 embed.timestamp = disnake.utils.utcnow()
                 await message.channel.send(embed=embed) #send embed to channel
+                #uncomment the lines underneeth if you want the bot to send a webhook of the user swearing.
 
+#                 channel_webhooks = await message.channel.webhooks()
+#                 webhook_count = 0
 
-bot.run ('') #insert the bot token
+#                 
+#                 for webhook in channel_webhooks:
+#                    
+#                     if webhook.user.id == message.author.id and webhook.name == "Bot Webhook":
+#                         await webhook.send(
+#                             content=message.content, username=message.author.display_name, avatar_url=message.author.avatar
+#                         )
+#                         return
+
+#                 
+#                 new_webhook = await message.channel.create_webhook(name="Bot Webhook", reason="Bot Webhook")
+#                 await new_webhook.send(content=message.content, username=message.author.display_name, avatar_url=message.author.avatar)
+
+bot.run("BOT_TOKEN") #insert the bot token
