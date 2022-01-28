@@ -22,4 +22,4 @@ In MacOS, Python comes pre-installed. If you're on another Operating System, Dow
 
 **New Update**
 
-Made the bot check to see if the default place holder in the text files ( "eiufewhiuwefhuwefhwfhueiwfehihewfiwefiuwefiuhwefiuh" ) is in the message content. If so, don't delete and don't mark it as a bad word.
+Added a webhook option so you can make the bot resend the user saying the bad word.
